@@ -36,7 +36,7 @@ endif
 
 " Use short keymaps, i.e. J instead of <Leader>J
 if !exists( 'g:paredit_shortmaps' )
-    let g:paredit_shortmaps = 0
+    let g:paredit_shortmaps = 1
 endif
 
 " Custom <Leader> for the paredit# plugin

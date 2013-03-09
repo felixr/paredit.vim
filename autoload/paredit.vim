@@ -60,7 +60,7 @@ function! paredit#InitBuffer()
         nnoremap <buffer> <silent> x            :<C-U>call paredit#EraseFwd()<CR>
         nnoremap <buffer> <silent> <Del>        :<C-U>call paredit#EraseFwd()<CR>
         nnoremap <buffer> <silent> X            :<C-U>call paredit#EraseBck()<CR>
-        nnoremap <buffer> <silent> s            :<C-U>call paredit#EraseFwd()<CR>i
+        " nnoremap <buffer> <silent> s            :<C-U>call paredit#EraseFwd()<CR>i
         nnoremap <buffer> <silent> D            v$:<C-U>call paredit#Delete(visualmode(),1)<CR>
         nnoremap <buffer> <silent> C            v$:<C-U>call paredit#Change(visualmode(),1)<CR>
         nnoremap <buffer> <silent> d            :<C-U>call paredit#SetDelete(v:count)<CR>g@
@@ -77,6 +77,7 @@ function! paredit#InitBuffer()
         nnoremap <buffer> <silent> caw          :<C-U>call paredit#ChangeSpec('caw',1)<CR>
         nnoremap <buffer> <silent> p            :<C-U>call paredit#Put('p')<CR>
         nnoremap <buffer> <silent> P            :<C-U>call paredit#Put('P')<CR>
+
         execute 'nnoremap <buffer> <silent> ' . g:paredit_leader.'w(  :<C-U>call paredit#Wrap("(",")")<CR>'
         execute 'vnoremap <buffer> <silent> ' . g:paredit_leader.'w(  :<C-U>call paredit#WrapSelection("(",")")<CR>'
         execute 'nnoremap <buffer> <silent> ' . g:paredit_leader.'w"  :<C-U>call paredit#Wrap('."'".'"'."','".'"'."')<CR>"
@@ -142,7 +143,7 @@ function! paredit#InitBuffer()
         silent! unmap  <buffer> x
         silent! unmap  <buffer> <Del>
         silent! unmap  <buffer> X
-        silent! unmap  <buffer> s
+        " silent! unmap  <buffer> s
         silent! unmap  <buffer> D
         silent! unmap  <buffer> C
         silent! unmap  <buffer> d
